@@ -1,11 +1,19 @@
 {
-    "manifest_version": 3,
-    "name": "Bombastico",
-    "version": "1.0",
-    "description": "Do Bombastico",
-    "permissions": ["activeTab", "scripting", "tabs"],
-    "host_permissions": ["<all_urls>"],
-    "action": {
-      "default_popup": "index.html"
-    }
+  "manifest_version": 3,
+  "name": "Bombastico",
+  "version": "1.0",
+  "description": "Do Bombastico",
+  "permissions": ["activeTab", "scripting", "tabs"],
+  "host_permissions": ["<all_urls>"],
+  "background": {
+      "service_worker": "index.js"
+  },
+  "commands": {
+      "play_video": {
+          "suggested_key": {
+              "default": "Ctrl+Shift+V"
+          },
+          "description": "Play floating video"
+      }
+  }
 }
